@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { LogService } from '../shared/detailsDao/details.service';
 import { VideoListComponent } from './video-list/video-list.component';
 import { videoList } from 'src/shared/detailsDao/videosDao/videos.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { videoList } from 'src/shared/detailsDao/videosDao/videos.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
     
   ],
   providers: [LogService,videoList],
