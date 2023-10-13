@@ -1,0 +1,14 @@
+<mat-form-field style="padding: 2%;">
+  <mat-label>Select Option</mat-label>
+  <mat-select [value]="selected" (selectionChange)="onChange($event)" >
+    <mat-option *ngFor="let val of vals" [value]="val.value">
+      {{val.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<hr style="height: 3px; background: black;margin-top: 1%;"/>
+<div >
+  <app-validate-drop  *ngIf="selected==='validate'"></app-validate-drop>
+  <app-translate-drop *ngIf="selected==='translate'"></app-translate-drop>
+</div>
+

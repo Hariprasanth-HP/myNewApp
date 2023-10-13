@@ -1,0 +1,36 @@
+<div  mat-dialog-content  >
+<h1 mat-dialog-title>Delete file</h1>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Message</mat-label>
+      <textarea matInput placeholder="Enter Message" [(ngModel)]="formData.message" name="message" required></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Format</mat-label>
+      <input matInput placeholder="Enter Format" [(ngModel)]="formData.format" name="format">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Version</mat-label>
+      <input matInput placeholder="Enter Version" [(ngModel)]="formData.version" name="version">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Target Format</mat-label>
+      <input matInput placeholder="Enter Name" [(ngModel)]="formData.tarFormat" name="name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Target Version</mat-label>
+      <input matInput placeholder="Enter Label" [(ngModel)]="formData.tarVersion" name="label" required>
+    </mat-form-field>
+  
+  </form>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="submitForm()">Submit</button>
+
+</div>

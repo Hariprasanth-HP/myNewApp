@@ -3,26 +3,41 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
 import { LogService } from '../shared/detailsDao/details.service';
-import { VideoListComponent } from './video-list/video-list.component';
-import { videoList } from 'src/shared/detailsDao/videosDao/videos.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateDropComponent } from './translate-drop/translate-drop.component';
+import { MaterialModule } from 'src/material/material.module';
+import { ValidateDropComponent } from './validate-drop/validate-drop.component';
+import { DropDownComponent } from './drop-down/drop-down.component';
+import { DialogAnimationsExampleDialog } from './drop-down/dialog/dialog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgIf } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent,
-    VideoListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    DropDownComponent,
+    ValidateDropComponent,
+    DialogAnimationsExampleDialog,
+    TranslateDropComponent,
+    HttpClientModule,
+    NgIf
     
   ],
-  providers: [LogService,videoList],
+  exports:[FormsModule,
+    DialogAnimationsExampleDialog
+  
+  ],
+    
+
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

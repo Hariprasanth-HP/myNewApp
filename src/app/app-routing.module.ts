@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './details/details.component';
-import { VideoListComponent } from './video-list/video-list.component';
+import { ValidateDropComponent } from './validate-drop/validate-drop.component';
+import { TranslateDropComponent } from './translate-drop/translate-drop.component';
 
 const routes: Routes = [
 
-  { path: 'details', component: DetailsComponent },
-  { path: 'videos', component: VideoListComponent },
+  { path: 'details', component: ValidateDropComponent },
+  { path: 'videos', component: TranslateDropComponent },
  
 ];
 

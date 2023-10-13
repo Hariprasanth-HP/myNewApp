@@ -1,0 +1,61 @@
+<div  mat-dialog-content  >
+  <div class="example-form-cont" >
+    <div style="min-height: 32px;">
+      <h4 style=" color: green;  font-weight: 600; margin-left: auto;margin-bottom: 0;
+      width: 39%;" *ngIf="statusCode===200"  >Success</h4>
+      <h4 style=" color: red;  font-weight: 600; margin-left: auto;margin-bottom: 0;
+      width: 39%;" *ngIf="statusCode!==200 && statusCode!==0"   >Error</h4>
+    </div>
+      <form class="example-form" #myForm="ngForm">
+        
+      <div class="input-side">
+        <mat-form-field class="example-full-width">
+          <mat-label>Format</mat-label>
+          <input matInput placeholder="Enter Format" [(ngModel)]="formData.srcFormat" name="srcFormat" required>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Version</mat-label>
+          <input matInput placeholder="Enter Version" [(ngModel)]="formData.srcVersion" name="srcVersion" required>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Target Format</mat-label>
+          <input matInput placeholder="Enter Name" [(ngModel)]="formData.targetFormat" name="targetFormat" required>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Target Version</mat-label>
+          <input matInput placeholder="Enter Label" [(ngModel)]="formData.targetVersion" name="targetVersion" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Target Name</mat-label>
+          <input matInput placeholder="Enter Label" [(ngModel)]="formData.targetName" name="targetName" required>
+        </mat-form-field>
+      </div>
+        <div class="horizontal-side">
+          <mat-form-field  style="width: 517px;" class="example-input-output">
+          <mat-label>Input Text :</mat-label>
+          <textarea matInput style="min-height: 360px;"  placeholder="Enter Message" [(ngModel)]="formData.message" name="message" required></textarea>                             
+        </mat-form-field>
+        <div mat-dialog-actions style="width: 200px;" >
+          <button  mat-raised-button color="primary" (click)="submitForm()" [disabled]="!myForm.form.valid">Translate</button>
+       
+        </div>
+        <div>
+          <div class="results-form" >
+            <mat-form-field style="width: 517px;min-height: 360px;" class="example-input-output">
+              <mat-label>Output Text :</mat-label>
+              <textarea readonly='true'  style="min-height: 360px;" matInput   name="results" [(ngModel)]="results" 
+              type="text"  ></textarea>                             
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+        
+      </form>
+    </div>
+    </div>
+    
+    
+    

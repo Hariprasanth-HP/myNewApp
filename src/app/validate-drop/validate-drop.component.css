@@ -1,0 +1,29 @@
+.example-form-cont {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.example-form {
+  display: flex;
+}
+.input-side {
+  width: 18%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-side-top {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-side {
+  margin: 20px;
+  display: flex;
+  gap: 3%;
+  align-items: center;
+}
+.results-form {
+  margin-left: 22px;
+  margin-top: 10px;
+  width: 100%;
+}

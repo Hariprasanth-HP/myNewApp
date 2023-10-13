@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoListComponent } from './video-list.component';
+import { DropDownComponent } from './drop-down.component';
 
-describe('VideoListComponent', () => {
-  let component: VideoListComponent;
-  let fixture: ComponentFixture<VideoListComponent>;
+describe('DropDownComponent', () => {
+  let component: DropDownComponent;
+  let fixture: ComponentFixture<DropDownComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoListComponent]
+      declarations: [DropDownComponent]
     });
-    fixture = TestBed.createComponent(VideoListComponent);
+    fixture = TestBed.createComponent(DropDownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
